@@ -1,0 +1,15 @@
+worker_threads: 1
+
+file_roots:
+  base:
+    - /srv/salt/states
+
+pillar_roots:
+  base:
+    - /srv/salt/pillar
+
+extension_modules: /srv/salt/modules
+
+ext_pillar:
+  - cmd_json: 'echo {\"pillar_from_cmd_json\":\"a_json_value\"}'
+  - my_pillar_module: noargs
